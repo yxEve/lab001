@@ -1,5 +1,6 @@
 const aCar = {
     owner : "Joe Bloggs",
+    address : '3 Walkers Lane',
     type : {
         make : 'Toyota',
         model : 'Corolla',
@@ -9,8 +10,18 @@ const aCar = {
         year : 201,
         county_code : 'WD',
         number : 1058
-    }
-};
+    },
+    previous_owners : [
+        {name : 'Pat Smith',
+        address : '1 Main Street'
+    },
+        {
+        name : 'Sheila Dwyer',
+        address : '2 High Street'
+        }
+    
+    ],
+}
 
 aCar.mileage = 10000;
 
@@ -28,3 +39,6 @@ console.log('Reg. = ' + aCar.registration.year + '-' + aCar.registration.county_
 
 console.log('It is a ' + aCar.color.exterior + ' car, ' + aCar.mileage + ' mileage, with '
 + aCar.color.interior.texture + ' interior.');
+
+console.log('First owner : ' + aCar.previous_owners[0].name + '    ' +
+aCar.previous_owners[0].address)
